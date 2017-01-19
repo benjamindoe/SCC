@@ -1,0 +1,331 @@
+System.Net Information: 0 : [16452] Current OS installation type is 'Client'.
+System.Net Verbose: 0 : [14376] WebRequest::Create(http://localhost:8080/FlightBooking/FlightBookingWS)
+System.Net Verbose: 0 : [14376] HttpWebRequest#42513911::HttpWebRequest(http://localhost:8080/FlightBooking/FlightBookingWS#1235902609)
+System.Net Information: 0 : [14376] RAS supported: True
+System.Net Verbose: 0 : [14376] Exiting HttpWebRequest#42513911::HttpWebRequest() 
+System.Net Verbose: 0 : [14376] Exiting WebRequest::Create() 	-> HttpWebRequest#42513911
+System.Net Verbose: 0 : [14376] ServicePoint#2806879::ServicePoint(localhost:8080)
+System.Net Information: 0 : [14376] Associating HttpWebRequest#42513911 with ServicePoint#2806879
+System.Net Verbose: 0 : [14376] HttpWebRequest#42513911::GetRequestStream()
+System.Net Information: 0 : [14376] Associating Connection#38306187 with HttpWebRequest#42513911
+System.Net.Sockets Verbose: 0 : [14376] Socket#65063852::Socket(AddressFamily#2)
+System.Net.Sockets Verbose: 0 : [14376] Exiting Socket#65063852::Socket() 
+System.Net.Sockets Verbose: 0 : [14376] Socket#34012170::Socket(AddressFamily#23)
+System.Net.Sockets Verbose: 0 : [14376] Exiting Socket#34012170::Socket() 
+System.Net.Sockets Verbose: 0 : [14376] DNS::TryInternalResolve(localhost)
+System.Net.Sockets Verbose: 0 : [14376] Socket#34012170::Connect([::1]:8080#254394643)
+System.Net.Sockets Information: 0 : [14376] Socket#34012170 - Created connection from [::1]:26268 to [::1]:8080.
+System.Net.Sockets Verbose: 0 : [14376] Exiting Socket#34012170::Connect() 
+System.Net.Sockets Verbose: 0 : [14376] Socket#65063852::Close()
+System.Net.Sockets Verbose: 0 : [14376] Socket#65063852::Dispose()
+System.Net.Sockets Verbose: 0 : [14376] Exiting Socket#65063852::Close() 
+System.Net Information: 0 : [14376] Connection#38306187 - Created connection from [::1]:26268 to [::1]:8080.
+System.Net Information: 0 : [14376] Associating HttpWebRequest#42513911 with ConnectStream#55983625
+System.Net Verbose: 0 : [14376] Exiting HttpWebRequest#42513911::GetRequestStream() 	-> ConnectStream#55983625
+System.Net Verbose: 0 : [14376] ConnectStream#55983625::Write()
+System.Net Verbose: 0 : [14376] Data from ConnectStream#55983625::Write
+System.Net Verbose: 0 : [14376] 00000000 : 3C 73 3A 45 6E 76 65 6C-6F 70 65 20 78 6D 6C 6E : <s:Envelope xmln
+System.Net Verbose: 0 : [14376] 00000010 : 73 3A 73 3D 22 68 74 74-70 3A 2F 2F 73 63 68 65 : s:s="http://sche
+System.Net Verbose: 0 : [14376] 00000020 : 6D 61 73 2E 78 6D 6C 73-6F 61 70 2E 6F 72 67 2F : mas.xmlsoap.org/
+System.Net Verbose: 0 : [14376] 00000030 : 73 6F 61 70 2F 65 6E 76-65 6C 6F 70 65 2F 22 3E : soap/envelope/">
+System.Net Verbose: 0 : [14376] 00000040 : 3C 73 3A 42 6F 64 79 20-78 6D 6C 6E 73 3A 78 73 : <s:Body xmlns:xs
+System.Net Verbose: 0 : [14376] 00000050 : 69 3D 22 68 74 74 70 3A-2F 2F 77 77 77 2E 77 33 : i="http://www.w3
+System.Net Verbose: 0 : [14376] 00000060 : 2E 6F 72 67 2F 32 30 30-31 2F 58 4D 4C 53 63 68 : .org/2001/XMLSch
+System.Net Verbose: 0 : [14376] 00000070 : 65 6D 61 2D 69 6E 73 74-61 6E 63 65 22 20 78 6D : ema-instance" xm
+System.Net Verbose: 0 : [14376] 00000080 : 6C 6E 73 3A 78 73 64 3D-22 68 74 74 70 3A 2F 2F : lns:xsd="http://
+System.Net Verbose: 0 : [14376] 00000090 : 77 77 77 2E 77 33 2E 6F-72 67 2F 32 30 30 31 2F : www.w3.org/2001/
+System.Net Verbose: 0 : [14376] 000000A0 : 58 4D 4C 53 63 68 65 6D-61 22 3E 3C 67 65 74 41 : XMLSchema"><getA
+System.Net Verbose: 0 : [14376] 000000B0 : 76 61 69 6C 61 62 6C 65-53 65 61 74 73 20 78 6D : vailableSeats xm
+System.Net Verbose: 0 : [14376] 000000C0 : 6C 6E 73 3D 22 68 74 74-70 3A 2F 2F 46 6C 69 67 : lns="http://Flig
+System.Net Verbose: 0 : [14376] 000000D0 : 68 74 42 6F 6F 6B 69 6E-67 2F 22 2F 3E 3C 2F 73 : htBooking/"/></s
+System.Net Verbose: 0 : [14376] 000000E0 : 3A 42 6F 64 79 3E 3C 2F-73 3A 45 6E 76 65 6C 6F : :Body></s:Envelo
+System.Net Verbose: 0 : [14376] 000000F0 : 70 65 3E                                        : pe>
+System.Net Verbose: 0 : [14376] Exiting ConnectStream#55983625::Write() 
+System.Net Verbose: 0 : [14376] ConnectStream#55983625::Close()
+System.Net Verbose: 0 : [14376] Exiting ConnectStream#55983625::Close() 
+System.Net Verbose: 0 : [14376] HttpWebRequest#42513911::GetResponse()
+System.Net Information: 0 : [14376] HttpWebRequest#42513911 - Request: POST /FlightBooking/FlightBookingWS HTTP/1.1
+
+System.Net Information: 0 : [14376] ConnectStream#55983625 - Sending headers
+{
+Content-Type: text/xml; charset=utf-8
+VsDebuggerCausalityData: uIDPoztjM9snnglHp2+syZ7uAW0AAAAA7s51JV2Qekyc+1EsAykQAx2OEryiGfZFjoWgh9S/MoUACQAA
+SOAPAction: "http://FlightBooking/FlightBookingWS/getAvailableSeatsRequest"
+Host: localhost:8080
+Content-Length: 243
+Expect: 100-continue
+Accept-Encoding: gzip, deflate
+Connection: Keep-Alive
+}.
+System.Net.Sockets Verbose: 0 : [14376] Socket#34012170::Send()
+System.Net.Sockets Verbose: 0 : [14376] Data from Socket#34012170::Send
+System.Net.Sockets Verbose: 0 : [14376] 00000000 : 50 4F 53 54 20 2F 46 6C-69 67 68 74 42 6F 6F 6B : POST /FlightBook
+System.Net.Sockets Verbose: 0 : [14376] 00000010 : 69 6E 67 2F 46 6C 69 67-68 74 42 6F 6F 6B 69 6E : ing/FlightBookin
+System.Net.Sockets Verbose: 0 : [14376] 00000020 : 67 57 53 20 48 54 54 50-2F 31 2E 31 0D 0A 43 6F : gWS HTTP/1.1..Co
+System.Net.Sockets Verbose: 0 : [14376] 00000030 : 6E 74 65 6E 74 2D 54 79-70 65 3A 20 74 65 78 74 : ntent-Type: text
+System.Net.Sockets Verbose: 0 : [14376] 00000040 : 2F 78 6D 6C 3B 20 63 68-61 72 73 65 74 3D 75 74 : /xml; charset=ut
+System.Net.Sockets Verbose: 0 : [14376] 00000050 : 66 2D 38 0D 0A 56 73 44-65 62 75 67 67 65 72 43 : f-8..VsDebuggerC
+System.Net.Sockets Verbose: 0 : [14376] 00000060 : 61 75 73 61 6C 69 74 79-44 61 74 61 3A 20 75 49 : ausalityData: uI
+System.Net.Sockets Verbose: 0 : [14376] 00000070 : 44 50 6F 7A 74 6A 4D 39-73 6E 6E 67 6C 48 70 32 : DPoztjM9snnglHp2
+System.Net.Sockets Verbose: 0 : [14376] 00000080 : 2B 73 79 5A 37 75 41 57-30 41 41 41 41 41 37 73 : +syZ7uAW0AAAAA7s
+System.Net.Sockets Verbose: 0 : [14376] 00000090 : 35 31 4A 56 32 51 65 6B-79 63 2B 31 45 73 41 79 : 51JV2Qekyc+1EsAy
+System.Net.Sockets Verbose: 0 : [14376] 000000A0 : 6B 51 41 78 32 4F 45 72-79 69 47 66 5A 46 6A 6F : kQAx2OEryiGfZFjo
+System.Net.Sockets Verbose: 0 : [14376] 000000B0 : 57 67 68 39 53 2F 4D 6F-55 41 43 51 41 41 0D 0A : Wgh9S/MoUACQAA..
+System.Net.Sockets Verbose: 0 : [14376] 000000C0 : 53 4F 41 50 41 63 74 69-6F 6E 3A 20 22 68 74 74 : SOAPAction: "htt
+System.Net.Sockets Verbose: 0 : [14376] 000000D0 : 70 3A 2F 2F 46 6C 69 67-68 74 42 6F 6F 6B 69 6E : p://FlightBookin
+System.Net.Sockets Verbose: 0 : [14376] 000000E0 : 67 2F 46 6C 69 67 68 74-42 6F 6F 6B 69 6E 67 57 : g/FlightBookingW
+System.Net.Sockets Verbose: 0 : [14376] 000000F0 : 53 2F 67 65 74 41 76 61-69 6C 61 62 6C 65 53 65 : S/getAvailableSe
+System.Net.Sockets Verbose: 0 : [14376] 00000100 : 61 74 73 52 65 71 75 65-73 74 22 0D 0A 48 6F 73 : atsRequest"..Hos
+System.Net.Sockets Verbose: 0 : [14376] 00000110 : 74 3A 20 6C 6F 63 61 6C-68 6F 73 74 3A 38 30 38 : t: localhost:808
+System.Net.Sockets Verbose: 0 : [14376] 00000120 : 30 0D 0A 43 6F 6E 74 65-6E 74 2D 4C 65 6E 67 74 : 0..Content-Lengt
+System.Net.Sockets Verbose: 0 : [14376] 00000130 : 68 3A 20 32 34 33 0D 0A-45 78 70 65 63 74 3A 20 : h: 243..Expect: 
+System.Net.Sockets Verbose: 0 : [14376] 00000140 : 31 30 30 2D 63 6F 6E 74-69 6E 75 65 0D 0A 41 63 : 100-continue..Ac
+System.Net.Sockets Verbose: 0 : [14376] 00000150 : 63 65 70 74 2D 45 6E 63-6F 64 69 6E 67 3A 20 67 : cept-Encoding: g
+System.Net.Sockets Verbose: 0 : [14376] 00000160 : 7A 69 70 2C 20 64 65 66-6C 61 74 65 0D 0A 43 6F : zip, deflate..Co
+System.Net.Sockets Verbose: 0 : [14376] 00000170 : 6E 6E 65 63 74 69 6F 6E-3A 20 4B 65 65 70 2D 41 : nnection: Keep-A
+System.Net.Sockets Verbose: 0 : [14376] 00000180 : 6C 69 76 65 0D 0A 0D 0A-                        : live....
+System.Net.Sockets Verbose: 0 : [14376] Exiting Socket#34012170::Send() 	-> Int32#392
+System.Net.Sockets Verbose: 0 : [14376] Socket#34012170::Receive()
+System.Net.Sockets Verbose: 0 : [14376] Data from Socket#34012170::Receive
+System.Net.Sockets Verbose: 0 : [14376] 00000000 : 48 54 54 50 2F 31 2E 31-20 31 30 30 20 43 6F 6E : HTTP/1.1 100 Con
+System.Net.Sockets Verbose: 0 : [14376] 00000010 : 74 69 6E 75 65 0D 0A 0D-0A                      : tinue....
+System.Net.Sockets Verbose: 0 : [14376] Exiting Socket#34012170::Receive() 	-> Int32#25
+System.Net Information: 0 : [14376] Connection#38306187 - Received status line: Version=1.1, StatusCode=100, StatusDescription=Continue.
+System.Net Information: 0 : [14376] Connection#38306187 - Received headers
+{
+
+}.
+System.Net.Sockets Verbose: 0 : [14376] Socket#34012170::MultipleSend()
+System.Net.Sockets Verbose: 0 : [14376] Exiting Socket#34012170::MultipleSend() 
+System.Net Verbose: 0 : [14376] Data from ConnectStream#55983625::ResubmitWrite
+System.Net Verbose: 0 : [14376] 00000000 : 3C 73 3A 45 6E 76 65 6C-6F 70 65 20 78 6D 6C 6E : <s:Envelope xmln
+System.Net Verbose: 0 : [14376] 00000010 : 73 3A 73 3D 22 68 74 74-70 3A 2F 2F 73 63 68 65 : s:s="http://sche
+System.Net Verbose: 0 : [14376] 00000020 : 6D 61 73 2E 78 6D 6C 73-6F 61 70 2E 6F 72 67 2F : mas.xmlsoap.org/
+System.Net Verbose: 0 : [14376] 00000030 : 73 6F 61 70 2F 65 6E 76-65 6C 6F 70 65 2F 22 3E : soap/envelope/">
+System.Net Verbose: 0 : [14376] 00000040 : 3C 73 3A 42 6F 64 79 20-78 6D 6C 6E 73 3A 78 73 : <s:Body xmlns:xs
+System.Net Verbose: 0 : [14376] 00000050 : 69 3D 22 68 74 74 70 3A-2F 2F 77 77 77 2E 77 33 : i="http://www.w3
+System.Net Verbose: 0 : [14376] 00000060 : 2E 6F 72 67 2F 32 30 30-31 2F 58 4D 4C 53 63 68 : .org/2001/XMLSch
+System.Net Verbose: 0 : [14376] 00000070 : 65 6D 61 2D 69 6E 73 74-61 6E 63 65 22 20 78 6D : ema-instance" xm
+System.Net Verbose: 0 : [14376] 00000080 : 6C 6E 73 3A 78 73 64 3D-22 68 74 74 70 3A 2F 2F : lns:xsd="http://
+System.Net Verbose: 0 : [14376] 00000090 : 77 77 77 2E 77 33 2E 6F-72 67 2F 32 30 30 31 2F : www.w3.org/2001/
+System.Net Verbose: 0 : [14376] 000000A0 : 58 4D 4C 53 63 68 65 6D-61 22 3E 3C 67 65 74 41 : XMLSchema"><getA
+System.Net Verbose: 0 : [14376] 000000B0 : 76 61 69 6C 61 62 6C 65-53 65 61 74 73 20 78 6D : vailableSeats xm
+System.Net Verbose: 0 : [14376] 000000C0 : 6C 6E 73 3D 22 68 74 74-70 3A 2F 2F 46 6C 69 67 : lns="http://Flig
+System.Net Verbose: 0 : [14376] 000000D0 : 68 74 42 6F 6F 6B 69 6E-67 2F 22 2F 3E 3C 2F 73 : htBooking/"/></s
+System.Net Verbose: 0 : [14376] 000000E0 : 3A 42 6F 64 79 3E 3C 2F-73 3A 45 6E 76 65 6C 6F : :Body></s:Envelo
+System.Net Verbose: 0 : [14376] 000000F0 : 70 65 3E                                        : pe>
+System.Net.Sockets Verbose: 0 : [14376] Socket#34012170::Receive()
+System.Net.Sockets Verbose: 0 : [14376] Data from Socket#34012170::Receive
+System.Net.Sockets Verbose: 0 : [14376] 00000000 : 48 54 54 50 2F 31 2E 31-20 32 30 30 20 4F 4B 0D : HTTP/1.1 200 OK.
+System.Net.Sockets Verbose: 0 : [14376] 00000010 : 0A 53 65 72 76 65 72 3A-20 47 6C 61 73 73 46 69 : .Server: GlassFi
+System.Net.Sockets Verbose: 0 : [14376] 00000020 : 73 68 20 53 65 72 76 65-72 20 4F 70 65 6E 20 53 : sh Server Open S
+System.Net.Sockets Verbose: 0 : [14376] 00000030 : 6F 75 72 63 65 20 45 64-69 74 69 6F 6E 20 20 34 : ource Edition  4
+System.Net.Sockets Verbose: 0 : [14376] 00000040 : 2E 31 2E 31 20 0D 0A 58-2D 50 6F 77 65 72 65 64 : .1.1 ..X-Powered
+System.Net.Sockets Verbose: 0 : [14376] 00000050 : 2D 42 79 3A 20 53 65 72-76 6C 65 74 2F 33 2E 31 : -By: Servlet/3.1
+System.Net.Sockets Verbose: 0 : [14376] 00000060 : 20 4A 53 50 2F 32 2E 33-20 28 47 6C 61 73 73 46 :  JSP/2.3 (GlassF
+System.Net.Sockets Verbose: 0 : [14376] 00000070 : 69 73 68 20 53 65 72 76-65 72 20 4F 70 65 6E 20 : ish Server Open 
+System.Net.Sockets Verbose: 0 : [14376] 00000080 : 53 6F 75 72 63 65 20 45-64 69 74 69 6F 6E 20 20 : Source Edition  
+System.Net.Sockets Verbose: 0 : [14376] 00000090 : 34 2E 31 2E 31 20 20 4A-61 76 61 2F 4F 72 61 63 : 4.1.1  Java/Orac
+System.Net.Sockets Verbose: 0 : [14376] 000000A0 : 6C 65 20 43 6F 72 70 6F-72 61 74 69 6F 6E 2F 31 : le Corporation/1
+System.Net.Sockets Verbose: 0 : [14376] 000000B0 : 2E 38 29 0D 0A 44 61 74-65 3A 20 54 75 65 2C 20 : .8)..Date: Tue, 
+System.Net.Sockets Verbose: 0 : [14376] 000000C0 : 31 37 20 4A 61 6E 20 32-30 31 37 20 31 35 3A 35 : 17 Jan 2017 15:5
+System.Net.Sockets Verbose: 0 : [14376] 000000D0 : 31 3A 34 38 20 47 4D 54-0D 0A 43 6F 6E 74 65 6E : 1:48 GMT..Conten
+System.Net.Sockets Verbose: 0 : [14376] 000000E0 : 74 2D 54 79 70 65 3A 20-74 65 78 74 2F 78 6D 6C : t-Type: text/xml
+System.Net.Sockets Verbose: 0 : [14376] 000000F0 : 3B 20 63 68 61 72 73 65-74 3D 75 74 66 2D 38 0D : ; charset=utf-8.
+System.Net.Sockets Verbose: 0 : [14376] 00000100 : 0A 54 72 61 6E 73 66 65-72 2D 45 6E 63 6F 64 69 : .Transfer-Encodi
+System.Net.Sockets Verbose: 0 : [14376] 00000110 : 6E 67 3A 20 63 68 75 6E-6B 65 64 0D 0A 0D 0A 36 : ng: chunked....6
+System.Net.Sockets Verbose: 0 : [14376] 00000120 : 65 0D 0A 3C 3F 78 6D 6C-20 76 65 72 73 69 6F 6E : e..<?xml version
+System.Net.Sockets Verbose: 0 : [14376] 00000130 : 3D 27 31 2E 30 27 20 65-6E 63 6F 64 69 6E 67 3D : ='1.0' encoding=
+System.Net.Sockets Verbose: 0 : [14376] 00000140 : 27 55 54 46 2D 38 27 3F-3E 3C 53 3A 45 6E 76 65 : 'UTF-8'?><S:Enve
+System.Net.Sockets Verbose: 0 : [14376] 00000150 : 6C 6F 70 65 20 78 6D 6C-6E 73 3A 53 3D 22 68 74 : lope xmlns:S="ht
+System.Net.Sockets Verbose: 0 : [14376] 00000160 : 74 70 3A 2F 2F 73 63 68-65 6D 61 73 2E 78 6D 6C : tp://schemas.xml
+System.Net.Sockets Verbose: 0 : [14376] 00000170 : 73 6F 61 70 2E 6F 72 67-2F 73 6F 61 70 2F 65 6E : soap.org/soap/en
+System.Net.Sockets Verbose: 0 : [14376] 00000180 : 76 65 6C 6F 70 65 2F 22-3E 3C 53 3A 42 6F 64 79 : velope/"><S:Body
+System.Net.Sockets Verbose: 0 : [14376] 00000190 : 3E 0D 0A                                        : >..
+System.Net.Sockets Verbose: 0 : [14376] Exiting Socket#34012170::Receive() 	-> Int32#403
+System.Net Information: 0 : [14376] Connection#38306187 - Received status line: Version=1.1, StatusCode=200, StatusDescription=OK.
+System.Net Information: 0 : [14376] Connection#38306187 - Received headers
+{
+Transfer-Encoding: chunked
+Content-Type: text/xml; charset=utf-8
+Date: Tue, 17 Jan 2017 15:51:48 GMT
+Server: GlassFish Server Open Source Edition  4.1.1
+X-Powered-By: Servlet/3.1 JSP/2.3 (GlassFish Server Open Source Edition  4.1.1  Java/Oracle Corporation/1.8)
+}.
+System.Net Information: 0 : [14376] ConnectStream#58843084::ConnectStream(Buffered -1 bytes.)
+System.Net Information: 0 : [14376] Associating HttpWebRequest#42513911 with ConnectStream#58843084
+System.Net Information: 0 : [14376] Associating HttpWebRequest#42513911 with HttpWebResponse#64738873
+System.Net Verbose: 0 : [14376] Exiting HttpWebRequest#42513911::GetResponse() 	-> HttpWebResponse#64738873
+System.Net Verbose: 0 : [14376] HttpWebResponse#64738873::GetResponseStream()
+System.Net Information: 0 : [14376] ContentLength=-1
+System.Net Verbose: 0 : [14376] Exiting HttpWebResponse#64738873::GetResponseStream() 	-> ConnectStream#58843084
+System.Net Verbose: 0 : [14376] ConnectStream#58843084::Read()
+System.Net Verbose: 0 : [14376] Data from ConnectStream#58843084::Read
+System.Net Verbose: 0 : [14376] 00000000 : 3C                                              : <
+System.Net Verbose: 0 : [14376] Exiting ConnectStream#58843084::Read() 	-> Int32#1
+System.Net Verbose: 0 : [14376] HttpWebResponse#64738873::GetResponseStream()
+System.Net Information: 0 : [14376] ContentLength=-1
+System.Net Verbose: 0 : [14376] Exiting HttpWebResponse#64738873::GetResponseStream() 	-> ConnectStream#58843084
+System.Net Verbose: 0 : [14376] ConnectStream#58843084::Read()
+System.Net Verbose: 0 : [14376] Data from ConnectStream#58843084::Read
+System.Net Verbose: 0 : [14376] 00000001 : 3F 78 6D 6C 20 76 65 72-73 69 6F 6E 3D 27 31 2E : ?xml version='1.
+System.Net Verbose: 0 : [14376] 00000011 : 30 27 20 65 6E 63 6F 64-69 6E 67 3D 27 55 54 46 : 0' encoding='UTF
+System.Net Verbose: 0 : [14376] 00000021 : 2D 38 27 3F 3E 3C 53 3A-45 6E 76 65 6C 6F 70 65 : -8'?><S:Envelope
+System.Net Verbose: 0 : [14376] 00000031 : 20 78 6D 6C 6E 73 3A 53-3D 22 68 74 74 70 3A 2F :  xmlns:S="http:/
+System.Net Verbose: 0 : [14376] 00000041 : 2F 73 63 68 65 6D 61 73-2E 78 6D 6C 73 6F 61 70 : /schemas.xmlsoap
+System.Net Verbose: 0 : [14376] 00000051 : 2E 6F 72 67 2F 73 6F 61-70 2F 65 6E 76 65 6C 6F : .org/soap/envelo
+System.Net Verbose: 0 : [14376] 00000061 : 70 65 2F 22 3E 3C 53 3A-42 6F 64 79 3E          : pe/"><S:Body>
+System.Net Verbose: 0 : [14376] Exiting ConnectStream#58843084::Read() 	-> Int32#109
+System.Net Verbose: 0 : [14376] ConnectStream#58843084::Read()
+System.Net.Sockets Verbose: 0 : [14376] Socket#34012170::Receive()
+System.Net.Sockets Verbose: 0 : [14376] Data from Socket#34012170::Receive
+System.Net.Sockets Verbose: 0 : [14376] 00000000 : 34 63 34 0D 0A 3C 6E 73-32 3A 67 65             : 4c4..<ns2:ge
+System.Net.Sockets Verbose: 0 : [14376] Exiting Socket#34012170::Receive() 	-> Int32#12
+System.Net.Sockets Verbose: 0 : [14376] Socket#34012170::Receive()
+System.Net.Sockets Verbose: 0 : [14376] Data from Socket#34012170::Receive
+System.Net.Sockets Verbose: 0 : [14376] (printing 1024 out of 1213)
+System.Net.Sockets Verbose: 0 : [14376] 00000075 : 74 41 76 61 69 6C 61 62-6C 65 53 65 61 74 73 52 : tAvailableSeatsR
+System.Net.Sockets Verbose: 0 : [14376] 00000085 : 65 73 70 6F 6E 73 65 20-78 6D 6C 6E 73 3A 6E 73 : esponse xmlns:ns
+System.Net.Sockets Verbose: 0 : [14376] 00000095 : 32 3D 22 68 74 74 70 3A-2F 2F 46 6C 69 67 68 74 : 2="http://Flight
+System.Net.Sockets Verbose: 0 : [14376] 000000A5 : 42 6F 6F 6B 69 6E 67 2F-22 20 78 6D 6C 6E 73 3A : Booking/" xmlns:
+System.Net.Sockets Verbose: 0 : [14376] 000000B5 : 6E 73 33 3D 22 68 74 74-70 3A 2F 2F 78 6D 6C 2E : ns3="http://xml.
+System.Net.Sockets Verbose: 0 : [14376] 000000C5 : 6E 65 74 62 65 61 6E 73-2E 6F 72 67 2F 73 63 68 : netbeans.org/sch
+System.Net.Sockets Verbose: 0 : [14376] 000000D5 : 65 6D 61 2F 62 6F 6F 6B-69 6E 67 53 63 68 65 6D : ema/bookingSchem
+System.Net.Sockets Verbose: 0 : [14376] 000000E5 : 61 22 3E 3C 72 65 74 75-72 6E 20 69 64 3D 22 31 : a"><return id="1
+System.Net.Sockets Verbose: 0 : [14376] 000000F5 : 22 3E 3C 6E 73 33 3A 4F-72 69 67 69 6E 43 69 74 : "><ns3:OriginCit
+System.Net.Sockets Verbose: 0 : [14376] 00000105 : 79 3E 4C 6F 6E 64 6F 6E-3C 2F 6E 73 33 3A 4F 72 : y>London</ns3:Or
+System.Net.Sockets Verbose: 0 : [14376] 00000115 : 69 67 69 6E 43 69 74 79-3E 3C 6E 73 33 3A 44 65 : iginCity><ns3:De
+System.Net.Sockets Verbose: 0 : [14376] 00000125 : 73 74 69 6E 61 74 69 6F-6E 43 69 74 79 3E 4D 61 : stinationCity>Ma
+System.Net.Sockets Verbose: 0 : [14376] 00000135 : 6E 63 68 65 73 74 65 72-3C 2F 6E 73 33 3A 44 65 : nchester</ns3:De
+System.Net.Sockets Verbose: 0 : [14376] 00000145 : 73 74 69 6E 61 74 69 6F-6E 43 69 74 79 3E 3C 6E : stinationCity><n
+System.Net.Sockets Verbose: 0 : [14376] 00000155 : 73 33 3A 41 69 72 6C 69-6E 65 3E 52 79 61 6E 61 : s3:Airline>Ryana
+System.Net.Sockets Verbose: 0 : [14376] 00000165 : 69 72 3C 2F 6E 73 33 3A-41 69 72 6C 69 6E 65 3E : ir</ns3:Airline>
+System.Net.Sockets Verbose: 0 : [14376] 00000175 : 3C 6E 73 33 3A 4E 6F 4F-66 53 65 61 74 73 3E 32 : <ns3:NoOfSeats>2
+System.Net.Sockets Verbose: 0 : [14376] 00000185 : 30 30 30 30 3C 2F 6E 73-33 3A 4E 6F 4F 66 53 65 : 0000</ns3:NoOfSe
+System.Net.Sockets Verbose: 0 : [14376] 00000195 : 61 74 73 3E 3C 6E 73 33-3A 4E 6F 4F 66 43 6F 6E : ats><ns3:NoOfCon
+System.Net.Sockets Verbose: 0 : [14376] 000001A5 : 6E 65 63 74 69 6F 6E 73-3E 30 3C 2F 6E 73 33 3A : nections>0</ns3:
+System.Net.Sockets Verbose: 0 : [14376] 000001B5 : 4E 6F 4F 66 43 6F 6E 6E-65 63 74 69 6F 6E 73 3E : NoOfConnections>
+System.Net.Sockets Verbose: 0 : [14376] 000001C5 : 3C 6E 73 33 3A 46 61 72-65 3E 3C 6E 73 33 3A 43 : <ns3:Fare><ns3:C
+System.Net.Sockets Verbose: 0 : [14376] 000001D5 : 75 72 72 65 6E 63 79 3E-47 42 50 3C 2F 6E 73 33 : urrency>GBP</ns3
+System.Net.Sockets Verbose: 0 : [14376] 000001E5 : 3A 43 75 72 72 65 6E 63-79 3E 3C 6E 73 33 3A 56 : :Currency><ns3:V
+System.Net.Sockets Verbose: 0 : [14376] 000001F5 : 61 6C 75 65 3E 31 30 30-3C 2F 6E 73 33 3A 56 61 : alue>100</ns3:Va
+System.Net.Sockets Verbose: 0 : [14376] 00000205 : 6C 75 65 3E 3C 2F 6E 73-33 3A 46 61 72 65 3E 3C : lue></ns3:Fare><
+System.Net.Sockets Verbose: 0 : [14376] 00000215 : 6E 73 33 3A 44 61 74 65-3E 32 30 31 37 2D 30 36 : ns3:Date>2017-06
+System.Net.Sockets Verbose: 0 : [14376] 00000225 : 2D 31 39 2B 30 31 3A 30-30 3C 2F 6E 73 33 3A 44 : -19+01:00</ns3:D
+System.Net.Sockets Verbose: 0 : [14376] 00000235 : 61 74 65 3E 3C 2F 72 65-74 75 72 6E 3E 3C 72 65 : ate></return><re
+System.Net.Sockets Verbose: 0 : [14376] 00000245 : 74 75 72 6E 20 69 64 3D-22 32 22 3E 3C 6E 73 33 : turn id="2"><ns3
+System.Net.Sockets Verbose: 0 : [14376] 00000255 : 3A 4F 72 69 67 69 6E 43-69 74 79 3E 47 65 6E 65 : :OriginCity>Gene
+System.Net.Sockets Verbose: 0 : [14376] 00000265 : 76 61 3C 2F 6E 73 33 3A-4F 72 69 67 69 6E 43 69 : va</ns3:OriginCi
+System.Net.Sockets Verbose: 0 : [14376] 00000275 : 74 79 3E 3C 6E 73 33 3A-44 65 73 74 69 6E 61 74 : ty><ns3:Destinat
+System.Net.Sockets Verbose: 0 : [14376] 00000285 : 69 6F 6E 43 69 74 79 3E-4E 6F 74 74 69 6E 67 68 : ionCity>Nottingh
+System.Net.Sockets Verbose: 0 : [14376] 00000295 : 61 6D 3C 2F 6E 73 33 3A-44 65 73 74 69 6E 61 74 : am</ns3:Destinat
+System.Net.Sockets Verbose: 0 : [14376] 000002A5 : 69 6F 6E 43 69 74 79 3E-3C 6E 73 33 3A 41 69 72 : ionCity><ns3:Air
+System.Net.Sockets Verbose: 0 : [14376] 000002B5 : 6C 69 6E 65 3E 45 61 73-79 4A 65 74 3C 2F 6E 73 : line>EasyJet</ns
+System.Net.Sockets Verbose: 0 : [14376] 000002C5 : 33 3A 41 69 72 6C 69 6E-65 3E 3C 6E 73 33 3A 4E : 3:Airline><ns3:N
+System.Net.Sockets Verbose: 0 : [14376] 000002D5 : 6F 4F 66 53 65 61 74 73-3E 31 31 30 3C 2F 6E 73 : oOfSeats>110</ns
+System.Net.Sockets Verbose: 0 : [14376] 000002E5 : 33 3A 4E 6F 4F 66 53 65-61 74 73 3E 3C 6E 73 33 : 3:NoOfSeats><ns3
+System.Net.Sockets Verbose: 0 : [14376] 000002F5 : 3A 4E 6F 4F 66 43 6F 6E-6E 65 63 74 69 6F 6E 73 : :NoOfConnections
+System.Net.Sockets Verbose: 0 : [14376] 00000305 : 3E 30 3C 2F 6E 73 33 3A-4E 6F 4F 66 43 6F 6E 6E : >0</ns3:NoOfConn
+System.Net.Sockets Verbose: 0 : [14376] 00000315 : 65 63 74 69 6F 6E 73 3E-3C 6E 73 33 3A 46 61 72 : ections><ns3:Far
+System.Net.Sockets Verbose: 0 : [14376] 00000325 : 65 3E 3C 6E 73 33 3A 43-75 72 72 65 6E 63 79 3E : e><ns3:Currency>
+System.Net.Sockets Verbose: 0 : [14376] 00000335 : 47 42 50 3C 2F 6E 73 33-3A 43 75 72 72 65 6E 63 : GBP</ns3:Currenc
+System.Net.Sockets Verbose: 0 : [14376] 00000345 : 79 3E 3C 6E 73 33 3A 56-61 6C 75 65 3E 31 33 30 : y><ns3:Value>130
+System.Net.Sockets Verbose: 0 : [14376] 00000355 : 3C 2F 6E 73 33 3A 56 61-6C 75 65 3E 3C 2F 6E 73 : </ns3:Value></ns
+System.Net.Sockets Verbose: 0 : [14376] 00000365 : 33 3A 46 61 72 65 3E 3C-6E 73 33 3A 44 61 74 65 : 3:Fare><ns3:Date
+System.Net.Sockets Verbose: 0 : [14376] 00000375 : 3E 32 30 31 37 2D 30 36-2D 32 30 2B 30 31 3A 30 : >2017-06-20+01:0
+System.Net.Sockets Verbose: 0 : [14376] 00000385 : 30 3C 2F 6E 73 33 3A 44-61 74 65 3E 3C 2F 72 65 : 0</ns3:Date></re
+System.Net.Sockets Verbose: 0 : [14376] 00000395 : 74 75 72 6E 3E 3C 72 65-74 75 72 6E 20 69 64 3D : turn><return id=
+System.Net.Sockets Verbose: 0 : [14376] 000003A5 : 22 33 22 3E 3C 6E 73 33-3A 4F 72 69 67 69 6E 43 : "3"><ns3:OriginC
+System.Net.Sockets Verbose: 0 : [14376] 000003B5 : 69 74 79 3E 4E 65 77 20-59 6F 72 6B 3C 2F 6E 73 : ity>New York</ns
+System.Net.Sockets Verbose: 0 : [14376] 000003C5 : 33 3A 4F 72 69 67 69 6E-43 69 74 79 3E 3C 6E 73 : 3:OriginCity><ns
+System.Net.Sockets Verbose: 0 : [14376] 000003D5 : 33 3A 44 65 73 74 69 6E-61 74 69 6F 6E 43 69 74 : 3:DestinationCit
+System.Net.Sockets Verbose: 0 : [14376] 000003E5 : 79 3E 4C 6F 6E 64 6F 6E-3C 2F 6E 73 33 3A 44 65 : y>London</ns3:De
+System.Net.Sockets Verbose: 0 : [14376] 000003F5 : 73 74 69 6E 61 74 69 6F-6E 43 69 74 79 3E 3C 6E : stinationCity><n
+System.Net.Sockets Verbose: 0 : [14376] 00000405 : 73 33 3A 41 69 72 6C 69-6E 65 3E 42 72 69 74 69 : s3:Airline>Briti
+System.Net.Sockets Verbose: 0 : [14376] 00000415 : 73 68 20 41 69 72 6C 69-6E 65 73 3C 2F 6E 73 33 : sh Airlines</ns3
+System.Net.Sockets Verbose: 0 : [14376] 00000425 : 3A 41 69 72 6C 69 6E 65-3E 3C 6E 73 33 3A 4E 6F : :Airline><ns3:No
+System.Net.Sockets Verbose: 0 : [14376] 00000435 : 4F 66 53 65 61 74 73 3E-32 30 30 30 30 3C 2F 6E : OfSeats>20000</n
+System.Net.Sockets Verbose: 0 : [14376] 00000445 : 73 33 3A 4E 6F 4F 66 53-65 61 74 73 3E 3C 6E 73 : s3:NoOfSeats><ns
+System.Net.Sockets Verbose: 0 : [14376] 00000455 : 33 3A 4E 6F 4F 66 43 6F-6E 6E 65 63 74 69 6F 6E : 3:NoOfConnection
+System.Net.Sockets Verbose: 0 : [14376] 00000465 : 73 3E 30 3C 2F 6E 73 33-3A 4E 6F 4F 66 43 6F 6E : s>0</ns3:NoOfCon
+System.Net.Sockets Verbose: 0 : [14376] Exiting Socket#34012170::Receive() 	-> Int32#1213
+System.Net Verbose: 0 : [14376] Data from ConnectStream#58843084::Read
+System.Net Verbose: 0 : [14376] (printing 1024 out of 1220)
+System.Net Verbose: 0 : [14376] 0000006E : 3C 6E 73 32 3A 67 65 74-41 76 61 69 6C 61 62 6C : <ns2:getAvailabl
+System.Net Verbose: 0 : [14376] 0000007E : 65 53 65 61 74 73 52 65-73 70 6F 6E 73 65 20 78 : eSeatsResponse x
+System.Net Verbose: 0 : [14376] 0000008E : 6D 6C 6E 73 3A 6E 73 32-3D 22 68 74 74 70 3A 2F : mlns:ns2="http:/
+System.Net Verbose: 0 : [14376] 0000009E : 2F 46 6C 69 67 68 74 42-6F 6F 6B 69 6E 67 2F 22 : /FlightBooking/"
+System.Net Verbose: 0 : [14376] 000000AE : 20 78 6D 6C 6E 73 3A 6E-73 33 3D 22 68 74 74 70 :  xmlns:ns3="http
+System.Net Verbose: 0 : [14376] 000000BE : 3A 2F 2F 78 6D 6C 2E 6E-65 74 62 65 61 6E 73 2E : ://xml.netbeans.
+System.Net Verbose: 0 : [14376] 000000CE : 6F 72 67 2F 73 63 68 65-6D 61 2F 62 6F 6F 6B 69 : org/schema/booki
+System.Net Verbose: 0 : [14376] 000000DE : 6E 67 53 63 68 65 6D 61-22 3E 3C 72 65 74 75 72 : ngSchema"><retur
+System.Net Verbose: 0 : [14376] 000000EE : 6E 20 69 64 3D 22 31 22-3E 3C 6E 73 33 3A 4F 72 : n id="1"><ns3:Or
+System.Net Verbose: 0 : [14376] 000000FE : 69 67 69 6E 43 69 74 79-3E 4C 6F 6E 64 6F 6E 3C : iginCity>London<
+System.Net Verbose: 0 : [14376] 0000010E : 2F 6E 73 33 3A 4F 72 69-67 69 6E 43 69 74 79 3E : /ns3:OriginCity>
+System.Net Verbose: 0 : [14376] 0000011E : 3C 6E 73 33 3A 44 65 73-74 69 6E 61 74 69 6F 6E : <ns3:Destination
+System.Net Verbose: 0 : [14376] 0000012E : 43 69 74 79 3E 4D 61 6E-63 68 65 73 74 65 72 3C : City>Manchester<
+System.Net Verbose: 0 : [14376] 0000013E : 2F 6E 73 33 3A 44 65 73-74 69 6E 61 74 69 6F 6E : /ns3:Destination
+System.Net Verbose: 0 : [14376] 0000014E : 43 69 74 79 3E 3C 6E 73-33 3A 41 69 72 6C 69 6E : City><ns3:Airlin
+System.Net Verbose: 0 : [14376] 0000015E : 65 3E 52 79 61 6E 61 69-72 3C 2F 6E 73 33 3A 41 : e>Ryanair</ns3:A
+System.Net Verbose: 0 : [14376] 0000016E : 69 72 6C 69 6E 65 3E 3C-6E 73 33 3A 4E 6F 4F 66 : irline><ns3:NoOf
+System.Net Verbose: 0 : [14376] 0000017E : 53 65 61 74 73 3E 32 30-30 30 30 3C 2F 6E 73 33 : Seats>20000</ns3
+System.Net Verbose: 0 : [14376] 0000018E : 3A 4E 6F 4F 66 53 65 61-74 73 3E 3C 6E 73 33 3A : :NoOfSeats><ns3:
+System.Net Verbose: 0 : [14376] 0000019E : 4E 6F 4F 66 43 6F 6E 6E-65 63 74 69 6F 6E 73 3E : NoOfConnections>
+System.Net Verbose: 0 : [14376] 000001AE : 30 3C 2F 6E 73 33 3A 4E-6F 4F 66 43 6F 6E 6E 65 : 0</ns3:NoOfConne
+System.Net Verbose: 0 : [14376] 000001BE : 63 74 69 6F 6E 73 3E 3C-6E 73 33 3A 46 61 72 65 : ctions><ns3:Fare
+System.Net Verbose: 0 : [14376] 000001CE : 3E 3C 6E 73 33 3A 43 75-72 72 65 6E 63 79 3E 47 : ><ns3:Currency>G
+System.Net Verbose: 0 : [14376] 000001DE : 42 50 3C 2F 6E 73 33 3A-43 75 72 72 65 6E 63 79 : BP</ns3:Currency
+System.Net Verbose: 0 : [14376] 000001EE : 3E 3C 6E 73 33 3A 56 61-6C 75 65 3E 31 30 30 3C : ><ns3:Value>100<
+System.Net Verbose: 0 : [14376] 000001FE : 2F 6E 73 33 3A 56 61 6C-75 65 3E 3C 2F 6E 73 33 : /ns3:Value></ns3
+System.Net Verbose: 0 : [14376] 0000020E : 3A 46 61 72 65 3E 3C 6E-73 33 3A 44 61 74 65 3E : :Fare><ns3:Date>
+System.Net Verbose: 0 : [14376] 0000021E : 32 30 31 37 2D 30 36 2D-31 39 2B 30 31 3A 30 30 : 2017-06-19+01:00
+System.Net Verbose: 0 : [14376] 0000022E : 3C 2F 6E 73 33 3A 44 61-74 65 3E 3C 2F 72 65 74 : </ns3:Date></ret
+System.Net Verbose: 0 : [14376] 0000023E : 75 72 6E 3E 3C 72 65 74-75 72 6E 20 69 64 3D 22 : urn><return id="
+System.Net Verbose: 0 : [14376] 0000024E : 32 22 3E 3C 6E 73 33 3A-4F 72 69 67 69 6E 43 69 : 2"><ns3:OriginCi
+System.Net Verbose: 0 : [14376] 0000025E : 74 79 3E 47 65 6E 65 76-61 3C 2F 6E 73 33 3A 4F : ty>Geneva</ns3:O
+System.Net Verbose: 0 : [14376] 0000026E : 72 69 67 69 6E 43 69 74-79 3E 3C 6E 73 33 3A 44 : riginCity><ns3:D
+System.Net Verbose: 0 : [14376] 0000027E : 65 73 74 69 6E 61 74 69-6F 6E 43 69 74 79 3E 4E : estinationCity>N
+System.Net Verbose: 0 : [14376] 0000028E : 6F 74 74 69 6E 67 68 61-6D 3C 2F 6E 73 33 3A 44 : ottingham</ns3:D
+System.Net Verbose: 0 : [14376] 0000029E : 65 73 74 69 6E 61 74 69-6F 6E 43 69 74 79 3E 3C : estinationCity><
+System.Net Verbose: 0 : [14376] 000002AE : 6E 73 33 3A 41 69 72 6C-69 6E 65 3E 45 61 73 79 : ns3:Airline>Easy
+System.Net Verbose: 0 : [14376] 000002BE : 4A 65 74 3C 2F 6E 73 33-3A 41 69 72 6C 69 6E 65 : Jet</ns3:Airline
+System.Net Verbose: 0 : [14376] 000002CE : 3E 3C 6E 73 33 3A 4E 6F-4F 66 53 65 61 74 73 3E : ><ns3:NoOfSeats>
+System.Net Verbose: 0 : [14376] 000002DE : 31 31 30 3C 2F 6E 73 33-3A 4E 6F 4F 66 53 65 61 : 110</ns3:NoOfSea
+System.Net Verbose: 0 : [14376] 000002EE : 74 73 3E 3C 6E 73 33 3A-4E 6F 4F 66 43 6F 6E 6E : ts><ns3:NoOfConn
+System.Net Verbose: 0 : [14376] 000002FE : 65 63 74 69 6F 6E 73 3E-30 3C 2F 6E 73 33 3A 4E : ections>0</ns3:N
+System.Net Verbose: 0 : [14376] 0000030E : 6F 4F 66 43 6F 6E 6E 65-63 74 69 6F 6E 73 3E 3C : oOfConnections><
+System.Net Verbose: 0 : [14376] 0000031E : 6E 73 33 3A 46 61 72 65-3E 3C 6E 73 33 3A 43 75 : ns3:Fare><ns3:Cu
+System.Net Verbose: 0 : [14376] 0000032E : 72 72 65 6E 63 79 3E 47-42 50 3C 2F 6E 73 33 3A : rrency>GBP</ns3:
+System.Net Verbose: 0 : [14376] 0000033E : 43 75 72 72 65 6E 63 79-3E 3C 6E 73 33 3A 56 61 : Currency><ns3:Va
+System.Net Verbose: 0 : [14376] 0000034E : 6C 75 65 3E 31 33 30 3C-2F 6E 73 33 3A 56 61 6C : lue>130</ns3:Val
+System.Net Verbose: 0 : [14376] 0000035E : 75 65 3E 3C 2F 6E 73 33-3A 46 61 72 65 3E 3C 6E : ue></ns3:Fare><n
+System.Net Verbose: 0 : [14376] 0000036E : 73 33 3A 44 61 74 65 3E-32 30 31 37 2D 30 36 2D : s3:Date>2017-06-
+System.Net Verbose: 0 : [14376] 0000037E : 32 30 2B 30 31 3A 30 30-3C 2F 6E 73 33 3A 44 61 : 20+01:00</ns3:Da
+System.Net Verbose: 0 : [14376] 0000038E : 74 65 3E 3C 2F 72 65 74-75 72 6E 3E 3C 72 65 74 : te></return><ret
+System.Net Verbose: 0 : [14376] 0000039E : 75 72 6E 20 69 64 3D 22-33 22 3E 3C 6E 73 33 3A : urn id="3"><ns3:
+System.Net Verbose: 0 : [14376] 000003AE : 4F 72 69 67 69 6E 43 69-74 79 3E 4E 65 77 20 59 : OriginCity>New Y
+System.Net Verbose: 0 : [14376] 000003BE : 6F 72 6B 3C 2F 6E 73 33-3A 4F 72 69 67 69 6E 43 : ork</ns3:OriginC
+System.Net Verbose: 0 : [14376] 000003CE : 69 74 79 3E 3C 6E 73 33-3A 44 65 73 74 69 6E 61 : ity><ns3:Destina
+System.Net Verbose: 0 : [14376] 000003DE : 74 69 6F 6E 43 69 74 79-3E 4C 6F 6E 64 6F 6E 3C : tionCity>London<
+System.Net Verbose: 0 : [14376] 000003EE : 2F 6E 73 33 3A 44 65 73-74 69 6E 61 74 69 6F 6E : /ns3:Destination
+System.Net Verbose: 0 : [14376] 000003FE : 43 69 74 79 3E 3C 6E 73-33 3A 41 69 72 6C 69 6E : City><ns3:Airlin
+System.Net Verbose: 0 : [14376] 0000040E : 65 3E 42 72 69 74 69 73-68 20 41 69 72 6C 69 6E : e>British Airlin
+System.Net Verbose: 0 : [14376] 0000041E : 65 73 3C 2F 6E 73 33 3A-41 69 72 6C 69 6E 65 3E : es</ns3:Airline>
+System.Net Verbose: 0 : [14376] 0000042E : 3C 6E 73 33 3A 4E 6F 4F-66 53 65 61 74 73 3E 32 : <ns3:NoOfSeats>2
+System.Net Verbose: 0 : [14376] 0000043E : 30 30 30 30 3C 2F 6E 73-33 3A 4E 6F 4F 66 53 65 : 0000</ns3:NoOfSe
+System.Net Verbose: 0 : [14376] 0000044E : 61 74 73 3E 3C 6E 73 33-3A 4E 6F 4F 66 43 6F 6E : ats><ns3:NoOfCon
+System.Net Verbose: 0 : [14376] 0000045E : 6E 65 63 74 69 6F 6E 73-3E 30 3C 2F 6E 73 33 3A : nections>0</ns3:
+System.Net Verbose: 0 : [14376] Exiting ConnectStream#58843084::Read() 	-> Int32#1220
+System.Net Verbose: 0 : [14376] ConnectStream#58843084::Read()
+System.Net.Sockets Verbose: 0 : [14376] Socket#34012170::Receive()
+System.Net.Sockets Verbose: 0 : [14376] Data from Socket#34012170::Receive
+System.Net.Sockets Verbose: 0 : [14376] 00000000 : 0D 0A 30 0D 0A 0D 0A                            : ..0....
+System.Net.Sockets Verbose: 0 : [14376] Exiting Socket#34012170::Receive() 	-> Int32#7
+System.Net Verbose: 0 : [14376] Exiting ConnectStream#58843084::Read() 	-> Int32#0
+System.Net Verbose: 0 : [14376] ConnectStream#58843084::Close()
+System.Net Verbose: 0 : [14376] Exiting ConnectStream#58843084::Close() 
+System.Net Verbose: 0 : [14376] HttpWebResponse#64738873::Close()
+System.Net Verbose: 0 : [14376] Exiting HttpWebResponse#64738873::Close() 
+System.Net Information: 0 : [23440] ServicePoint#2806879 - Closed as idle.
+System.Net.Sockets Verbose: 0 : [23440] Socket#34012170::Dispose()
+System.Net Information: 0 : [23440] ServicePoint#2806879 - ConnectionGroup#36610825 - Closed as idle.

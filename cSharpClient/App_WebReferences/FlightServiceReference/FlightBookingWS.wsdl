@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://FlightBooking/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="FlightBookingWS" targetNamespace="http://FlightBooking/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://localhost:8080/FlightBooking/FlightBookingWS?xsd=1" namespace="http://xml.netbeans.org/schema/bookingSchema" />
+    </xsd:schema>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://localhost:8080/FlightBooking/FlightBookingWS?xsd=2" namespace="http://FlightBooking/" />
+    </xsd:schema>
+  </types>
+  <message name="setup">
+    <part name="parameters" element="tns:setup" />
+  </message>
+  <message name="setupResponse">
+    <part name="parameters" element="tns:setupResponse" />
+  </message>
+  <message name="searchFlight">
+    <part name="parameters" element="tns:searchFlight" />
+  </message>
+  <message name="searchFlightResponse">
+    <part name="parameters" element="tns:searchFlightResponse" />
+  </message>
+  <message name="bookFlight">
+    <part name="parameters" element="tns:bookFlight" />
+  </message>
+  <message name="bookFlightResponse">
+    <part name="parameters" element="tns:bookFlightResponse" />
+  </message>
+  <message name="getAvailableSeats">
+    <part name="parameters" element="tns:getAvailableSeats" />
+  </message>
+  <message name="getAvailableSeatsResponse">
+    <part name="parameters" element="tns:getAvailableSeatsResponse" />
+  </message>
+  <portType name="FlightBookingWS">
+    <operation name="setup">
+      <input wsam:Action="http://FlightBooking/FlightBookingWS/setupRequest" message="tns:setup" />
+      <output wsam:Action="http://FlightBooking/FlightBookingWS/setupResponse" message="tns:setupResponse" />
+    </operation>
+    <operation name="searchFlight">
+      <input wsam:Action="http://FlightBooking/FlightBookingWS/searchFlightRequest" message="tns:searchFlight" />
+      <output wsam:Action="http://FlightBooking/FlightBookingWS/searchFlightResponse" message="tns:searchFlightResponse" />
+    </operation>
+    <operation name="bookFlight">
+      <input wsam:Action="http://FlightBooking/FlightBookingWS/bookFlightRequest" message="tns:bookFlight" />
+      <output wsam:Action="http://FlightBooking/FlightBookingWS/bookFlightResponse" message="tns:bookFlightResponse" />
+    </operation>
+    <operation name="getAvailableSeats">
+      <input wsam:Action="http://FlightBooking/FlightBookingWS/getAvailableSeatsRequest" message="tns:getAvailableSeats" />
+      <output wsam:Action="http://FlightBooking/FlightBookingWS/getAvailableSeatsResponse" message="tns:getAvailableSeatsResponse" />
+    </operation>
+  </portType>
+  <binding name="FlightBookingWSPortBinding" type="tns:FlightBookingWS">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="setup">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="searchFlight">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="bookFlight">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getAvailableSeats">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="FlightBookingWS">
+    <port name="FlightBookingWSPort" binding="tns:FlightBookingWSPortBinding">
+      <soap:address location="http://localhost:8080/FlightBooking/FlightBookingWS" />
+    </port>
+  </service>
+</definitions>

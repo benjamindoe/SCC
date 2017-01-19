@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://FlightBooking/" xmlns:ns1="http://xml.netbeans.org/schema/bookingSchema" targetNamespace="http://FlightBooking/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:8080/FlightBooking/FlightBookingWS?xsd=1" namespace="http://xml.netbeans.org/schema/bookingSchema" />
+  <xs:element name="bookFlight" type="tns:bookFlight" />
+  <xs:element name="bookFlightResponse" type="tns:bookFlightResponse" />
+  <xs:element name="getAvailableSeats" type="tns:getAvailableSeats" />
+  <xs:element name="getAvailableSeatsResponse" type="tns:getAvailableSeatsResponse" />
+  <xs:element name="searchFlight" type="tns:searchFlight" />
+  <xs:element name="searchFlightResponse" type="tns:searchFlightResponse" />
+  <xs:element name="setup" type="tns:setup" />
+  <xs:element name="setupResponse" type="tns:setupResponse" />
+  <xs:complexType name="setup">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="setupResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="unbounded" form="qualified" name="Flight" type="ns1:Flight" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="searchFlight">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="OriginCity" type="xs:string" />
+      <xs:element minOccurs="0" name="DestinationCity" type="xs:string" />
+      <xs:element minOccurs="0" name="Airline" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="searchFlightResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="unbounded" form="qualified" name="Flight" type="ns1:Flight" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getAvailableSeats">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="getAvailableSeatsResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="ns1:Flight" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="bookFlight">
+    <xs:sequence>
+      <xs:element name="id" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="bookFlightResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

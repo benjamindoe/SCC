@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://DOCwebServices/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="CurrencyConversionWSService" targetNamespace="http://DOCwebServices/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://localhost:8080/CurrencyConvertor/CurrencyConversionWSService?xsd=1" namespace="http://DOCwebServices/" />
+    </xsd:schema>
+  </types>
+  <message name="GetConversionRate">
+    <part name="parameters" element="tns:GetConversionRate" />
+  </message>
+  <message name="GetConversionRateResponse">
+    <part name="parameters" element="tns:GetConversionRateResponse" />
+  </message>
+  <message name="GetCurrencyCodes">
+    <part name="parameters" element="tns:GetCurrencyCodes" />
+  </message>
+  <message name="GetCurrencyCodesResponse">
+    <part name="parameters" element="tns:GetCurrencyCodesResponse" />
+  </message>
+  <portType name="CurrencyConversionWS">
+    <operation name="GetConversionRate">
+      <input wsam:Action="http://DOCwebServices/CurrencyConversionWS/GetConversionRateRequest" message="tns:GetConversionRate" />
+      <output wsam:Action="http://DOCwebServices/CurrencyConversionWS/GetConversionRateResponse" message="tns:GetConversionRateResponse" />
+    </operation>
+    <operation name="GetCurrencyCodes">
+      <input wsam:Action="http://DOCwebServices/CurrencyConversionWS/GetCurrencyCodesRequest" message="tns:GetCurrencyCodes" />
+      <output wsam:Action="http://DOCwebServices/CurrencyConversionWS/GetCurrencyCodesResponse" message="tns:GetCurrencyCodesResponse" />
+    </operation>
+  </portType>
+  <binding name="CurrencyConversionWSPortBinding" type="tns:CurrencyConversionWS">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="GetConversionRate">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GetCurrencyCodes">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="CurrencyConversionWSService">
+    <port name="CurrencyConversionWSPort" binding="tns:CurrencyConversionWSPortBinding">
+      <soap:address location="http://localhost:8080/CurrencyConvertor/CurrencyConversionWSService" />
+    </port>
+  </service>
+</definitions>

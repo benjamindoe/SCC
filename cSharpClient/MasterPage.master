@@ -1,0 +1,27 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <header class="header">
+            <div class="header__title">
+                <h1>Flight Booking Service</h1>
+            </div>
+            
+            <asp:DropDownList ID="ddCurrency" runat="server" OnSelectedIndexChanged="ddCurrency_SelectedIndexChanged" AutoPostBack="true"></asp:DropDownList>
+        </header>
+        <div class="body">
+            <asp:ContentPlaceHolder id="MainContent" runat="server" />
+        </div>
+    </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    elementFormDefault="qualified">
+    <xsd:complexType name="Fare">
+        <xsd:sequence>
+            <xsd:element name="Currency" type="xsd:string"/>
+            <xsd:element name="Value" type="xsd:int"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="Flight" >
+        <xsd:sequence>
+            <xsd:element name="OriginCity" type="xsd:string"/>
+            <xsd:element name="DestinationCity" type="xsd:string"/>
+            <xsd:element name="Airline" type="xsd:string"/>
+            <xsd:element name="NoOfSeats" type="xsd:int"/>
+            <xsd:element name="NoOfConnections" type="xsd:int"/>
+            <xsd:element name="Fare" type="Fare"/>
+            <xsd:element name="Date" type="xsd:date" />
+        </xsd:sequence>
+        <xsd:attribute name="id" type="xsd:int"/>
+    </xsd:complexType>
+    <xsd:element name="Flights">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="Flight" type="Flight" minOccurs="0"  maxOccurs="unbounded"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+</xsd:schema>

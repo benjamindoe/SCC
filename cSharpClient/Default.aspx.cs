@@ -7,49 +7,37 @@ using System.Web.UI.WebControls;
 
 public partial class _Default : System.Web.UI.Page
 {
-    FlightServiceReference.FlightBookingWSClient flightWSclient;
-    CurrencyConvServiceReference.CurrencyConversionWSClient CurConvWSclient;
     protected void Page_Load(object sender, EventArgs e)
     {
-        flightWSclient = new FlightServiceReference.FlightBookingWSClient();
-        CurConvWSclient = new CurrencyConvServiceReference.CurrencyConversionWSClient();
         if (!IsPostBack)
         {
+            FlightServiceReference.FlightBookingWSClient flightWSclient = new FlightServiceReference.FlightBookingWSClient();
             FlightServiceReference.Flight[] flights = flightWSclient.getAvailableSeats();
-            List<String> Airlines = new List<String>();
+            SortedSet<String> airlines =  new SortedSet<String>();
+            SortedSet<String> destFrom =  new SortedSet<String>();
+            SortedSet<String> destTo =    new SortedSet<String>();
             for (int i = 0; i < flights.Length; ++i)
             {
                 FlightServiceReference.Flight f = flights[i];
-                Airlines.Add(f.Airline);
+                airlines.Add(f.Airline);
+                destFrom.Add(f.OriginCity.City);
+                destTo.Add(f.DestinationCity.City);
             }
-            Airlines.Sort();
-            Airlines.Insert(0, "No Preference");
-            ddAirlines.DataSource = Airlines;
+            List<String> airlineList = new List<String>(airlines);
+            airlineList.Insert(0, "No Preference");
+
+            ddAirlines.DataSource = airlineList;
             ddAirlines.DataBind();
+            ddFlightsFrom.DataSource = destFrom;
+            ddFlightsFrom.DataBind();
+            ddFlightsTo.DataSource = destTo;
+            ddFlightsTo.DataBind();
         }
-        lblCurrency.Text = Session["fareCurr"].ToString();
-        ddFlightsDataBind();
     }
-    protected void ddFlightsDataBind()
+
+    protected void btnSearch_Click(object sender, EventArgs e)
     {
-        FlightServiceReference.Flight[] flights = flightWSclient.getAvailableSeats();
-        for (int i = 0; i < flights.Length; ++i)
-        {
-            FlightServiceReference.Flight f = flights[i];
-            String fareCurr = Session["fareCurr"].ToString();
-            double fareVal = CurrencyExchange(f.Fare.Currency, fareCurr, f.Fare.Value);
-            String fareValStr = String.Format("{0:0.00}", Math.Round(fareVal, 2));
-            String optionText = f.Date + " " + f.OriginCity + " - " + f.DestinationCity + " " + fareValStr + "(" + fareCurr + ")";
-            ddFlights.Items.Insert(i, new ListItem(optionText, f.id.ToString()));
-        }
-        ddFlights.DataBind();
+        string airline = ddAirlines.SelectedValue != "No Preference" ? ddAirlines.SelectedValue : "";
+        Response.Redirect("~/Search-Results.aspx?origin=" + ddFlightsFrom.SelectedValue + "&dest="+ ddFlightsTo.SelectedValue + "&Airline=" + airline + "&Direct=" + chkDirect.Checked);
     }
-    protected double CurrencyExchange(String fromCode, String toCode, double val)
-    {
-        double xRate = CurConvWSclient.GetConversionRate(fromCode, toCode);
-
-        return xRate * val;
-    }
-
-
 }

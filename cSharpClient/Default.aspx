@@ -4,10 +4,24 @@
 </asp:Content>
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" Runat="Server">
     
-    <asp:Label ID="lblCurrency" runat="server" Text="Label">Select Preferred Currency</asp:Label>
-    <asp:DropDownList ID="ddFlights" runat="server"></asp:DropDownList>
-    <asp:DropDownList ID="ddAirlines" runat="server"></asp:DropDownList>
-
+    <div class="body default-aspx">
+        <div class="input-field inline">
+            <i class="material-icons prefix">location_on</i>
+            <asp:DropDownList ID="ddFlightsFrom" runat="server"></asp:DropDownList>
+            <label>From</label>
+        </div>
+        <div class="input-field inline">
+            <i class="material-icons prefix">location_on</i>
+            <asp:DropDownList ID="ddFlightsTo" runat="server"></asp:DropDownList>
+            <label>To</label>
+        </div>
+        <asp:CheckBox ID="chkDirect" runat="server" Text="Direct Flights Only"/>
+        <div class="input-field">
+            <asp:DropDownList ID="ddAirlines" runat="server"></asp:DropDownList>
+        </div>
+    
+        <asp:Button ID="btnSearch" runat="server" OnClick="btnSearch_Click" Text="Search" />
+    </div>
 
 </asp:Content>
 

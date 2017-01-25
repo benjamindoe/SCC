@@ -36,12 +36,22 @@ public class FlightBookingWS {
         Fare fare;
         GregorianCalendar c;
         XMLGregorianCalendar flightDate;
+        Address airport;
 
         flight = new FlightBooking.Flight();
         flight.setId(1);
-        flight.setAirline("Ryanair");
-        flight.setDestinationCity("Manchester");
-        flight.setOriginCity("London");
+        flight.setAirline("Virgin Atlantic");
+        flight.setWebsite("virginatlantic.com");
+        airport = new Address();
+        airport.setAirport("Manchester Airport");
+        airport.setCity("Manchester");
+        airport.setCountry("United Kingdom");
+        flight.setDestinationCity(airport);
+        airport = new Address();
+        airport.setAirport("London Luton Airport");
+        airport.setCity("London");
+        airport.setCountry("United Kingdom");
+        flight.setOriginCity(airport);
         flight.setNoOfSeats(20000);
         flight.setNoOfConnections(0);
         c = new GregorianCalendar(2017, 05, 19);
@@ -60,8 +70,17 @@ public class FlightBookingWS {
         flight = new FlightBooking.Flight();
         flight.setId(2);
         flight.setAirline("EasyJet");
-        flight.setDestinationCity("Nottingham");
-        flight.setOriginCity("Geneva");
+        flight.setWebsite("easyjet.com");
+        airport = new Address();
+        airport.setAirport("East Midlands Airport");
+        airport.setCity("Castle Donnington");
+        airport.setCountry("United Kingdom");
+        flight.setDestinationCity(airport);
+        airport = new Address();
+        airport.setAirport("Geneva International Airport");
+        airport.setCity("Geneva");
+        airport.setCountry("Switzerland");
+        flight.setOriginCity(airport);
         flight.setNoOfSeats(110);
         flight.setNoOfConnections(0);
         c = new GregorianCalendar(2017, 05, 20);
@@ -76,12 +95,50 @@ public class FlightBookingWS {
         fare.setValue(130);
         flight.setFare(fare);
         flightList.add(flight);
-        
+
+        flight = new FlightBooking.Flight();
+        flight.setId(2);
+        flight.setAirline("EasyJet");
+        flight.setWebsite("easyjet.com");
+        airport = new Address();
+        airport.setAirport("East Midlands Airport");
+        airport.setCity("Castle Donnington");
+        airport.setCountry("United Kingdom");
+        flight.setDestinationCity(airport);
+        airport = new Address();
+        airport.setAirport("Geneva International Airport");
+        airport.setCity("Geneva");
+        airport.setCountry("Switzerland");
+        flight.setOriginCity(airport);
+        flight.setNoOfSeats(610);
+        flight.setNoOfConnections(1);
+        c = new GregorianCalendar(2017, 05, 20);
+        try {
+            flightDate = DatatypeFactory.newInstance().newXMLGregorianCalendar(c);
+            flight.setDate(flightDate);
+        } catch (DatatypeConfigurationException ex) {
+            Logger.getLogger(FlightBookingWS.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        fare = new FlightBooking.Fare();
+        fare.setCurrency("GBP");
+        fare.setValue(330);
+        flight.setFare(fare);
+        flightList.add(flight);
+ 
         flight = new FlightBooking.Flight();
         flight.setId(3);
-        flight.setAirline("British Airlines");
-        flight.setDestinationCity("London");
-        flight.setOriginCity("New York");
+        flight.setAirline("American Airlines");
+        flight.setWebsite("aa.com");
+        airport = new Address();
+        airport.setAirport("Heathrow Airport");
+        airport.setCity("London");
+        airport.setCountry("United Kindom");
+        flight.setDestinationCity(airport);
+        airport = new Address();
+        airport.setAirport("JFK Airport");
+        airport.setCity("New York");
+        airport.setCountry("United States");
+        flight.setOriginCity(airport);
         flight.setNoOfSeats(20000);
         flight.setNoOfConnections(0);
         c = new GregorianCalendar(2017, 05, 21);
@@ -138,52 +195,60 @@ public class FlightBookingWS {
      * @param OriginCity
      * @param DestinationCity
      * @param Airline
+     * @param DirectFlight
      * @return 
      */
     @WebMethod(operationName = "searchFlight")
-    public Flights searchFlight(@WebParam(name = "OriginCity") String OriginCity, @WebParam(name = "DestinationCity") String DestinationCity, @WebParam(name = "Airline") String Airline) {
+    public List<Flight> searchFlight(@WebParam(name = "OriginCity") String OriginCity, 
+            @WebParam(name = "DestinationCity") String DestinationCity, 
+            @WebParam(name = "Airline") String Airline,
+            @WebParam(name = "DirectFlight") Boolean DirectFlight
+            //@WebParam(name = "FlightDate") String FlightDate
+    ) {
         Flights flights = unmarshalFlights();
         List<Flight> flightList = flights.getFlight();
         Flights searchResults = new Flights();
         List<Flight> searchList = searchResults.getFlight();
-        for(Flight f : flightList)
-        {
+        flightList.forEach((f) -> {
             Boolean match = false;
-            if (!OriginCity.isEmpty())
-            {
-                match = f.originCity.equals(OriginCity);
-            }
-            if (!empty(DestinationCity))
-            {
-                match = f.destinationCity.equals(DestinationCity);
-            }
-            if(!empty(Airline))
-            {
+            if (!"".equals(OriginCity))
+                match = f.originCity.city.equals(OriginCity);
+            if (!"".equals(DestinationCity) && match == true)
+                match = f.destinationCity.city.equals(DestinationCity);
+            if(!"".equals(Airline) && match == true)
                 match = f.airline.equals(Airline);
-            }
-            if (match)
+            if(DirectFlight && match == true)
+                match = f.noOfConnections == 0;
+            if (match) {
                 searchList.add(f);
-        }
-        return searchResults;
+            }
+        });
+        return searchList;
     }
 
     /**
      * Web service operation
      * @param id
+     * @param seats
      * @return boolean
      *  true = booking made, false = id didn't match any flights
      */
     @WebMethod(operationName = "bookFlight")
-    public Boolean bookFlight(@WebParam(name = "id") int id) {
+    public int bookFlight(@WebParam(name = "id") int id, @WebParam(name = "seats") int seats) {
         Flights flights = this.unmarshalFlights();
         List<Flight> flightList = flights.getFlight();
         for(Flight f : flightList) {
             if(f.getId() == id) {
-                f.setNoOfSeats(f.getNoOfSeats() - 1);
-                return true;
+                if(f.getNoOfSeats() < seats)
+                {
+                    f.setNoOfSeats(0);
+                } else {
+                    f.setNoOfSeats(f.getNoOfSeats() - seats);
+                }
+                return f.getNoOfSeats();
             }
         }
-        return false;
+        return 0;
     }
     
     private Flights unmarshalFlights() {
@@ -202,6 +267,6 @@ public class FlightBookingWS {
     private Boolean empty(String var)
     {
         return var == null || var.equals("");
-    }
+    }   
     
 }

@@ -1,0 +1,82 @@
+﻿html {
+    height:100%;
+}
+.content-wrapper{
+    position:absolute;
+    top:0;right:0;bottom:0;left:0;
+    background-color: #E0E0E0;
+}
+.header {
+    position:fixed;
+    top:0;left:0;right:0;
+    background-color: #FFF;
+    z-index:99;
+}
+.header--wrap {
+    width: 1160px;
+    margin:auto;
+}
+.header__currency {
+    display: inline;
+}
+.header__title {
+    display:inline;
+}
+.body {
+    width: 1160px;
+    margin:auto;
+    margin-top: 120px;
+}
+.flights__flight {
+    background-color:#FFF;
+    border-radius:2px;
+    position: relative;
+    padding: 16px;
+    padding-left: 120px;
+    min-height: 120px;
+    margin-bottom: 16px;
+}
+.flights__flight>span {
+    display: block; 
+}
+.flight__btn, .flight__price {
+    position:absolute;
+    right: 15px;
+}
+.flight__btn {
+    bottom: 15px;
+}
+.flight__price {
+    top: 15px;
+    font-weight:500;
+    font-size: 16pt;
+}
+.flight__logo {
+    position: absolute;
+    left: 16px;
+    top: 50%;
+    margin-top: -42px;
+}
+.valign {
+    width:100%;
+}
+.bold {
+    font-weight: bold;
+}
+.popup__backdrop {
+    z-index: 9999;
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    background-color: #000;
+    background-color: rgba(0,0,0,0.6);
+}
+.popup__map {
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    left: 0;
+    margin-top: -400px;
+    height: 800px;
+    width: 1100px;
+}

@@ -9,15 +9,23 @@
   </xs:element>
   <xs:complexType name="Flight">
     <xs:sequence>
-      <xs:element name="OriginCity" type="xs:string" />
-      <xs:element name="DestinationCity" type="xs:string" />
+      <xs:element name="OriginCity" type="tns:Address" />
+      <xs:element name="DestinationCity" type="tns:Address" />
       <xs:element name="Airline" type="xs:string" />
       <xs:element name="NoOfSeats" type="xs:int" />
       <xs:element name="NoOfConnections" type="xs:int" />
       <xs:element name="Fare" type="tns:Fare" />
       <xs:element name="Date" type="xs:date" />
+      <xs:element name="Website" type="xs:string" />
     </xs:sequence>
     <xs:attribute name="id" type="xs:int" />
+  </xs:complexType>
+  <xs:complexType name="Address">
+    <xs:sequence>
+      <xs:element name="Airport" type="xs:string" />
+      <xs:element name="Country" type="xs:string" />
+      <xs:element name="City" type="xs:string" />
+    </xs:sequence>
   </xs:complexType>
   <xs:complexType name="Fare">
     <xs:sequence>

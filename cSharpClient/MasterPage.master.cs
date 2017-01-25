@@ -4,23 +4,35 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Net.Http;
+using System.Net.Http.Headers;
+using Newtonsoft.Json;
 
 public partial class MasterPage : System.Web.UI.MasterPage
 {
-    CurrencyConvServiceReference.CurrencyConversionWSClient CurConvWSclient;
     protected void Page_Load(object sender, EventArgs e)
     {
-        CurConvWSclient = new CurrencyConvServiceReference.CurrencyConversionWSClient();
         if (!IsPostBack)
         {
-            String[] currencyCodes = CurConvWSclient.GetCurrencyCodes();
-            ddCurrency.DataSource = currencyCodes;
+            Exchange ex = RestClient.getAllExRates();
+            ddCurrency.Items.Add(ex.Base);
+            foreach(var val in ex.Rates)
+                ddCurrency.Items.Add(val.Key);
+
             ddCurrency.DataBind();
+            if (Session["fareCurr"] == null)
+            {
+                Session.Add("fareCurr", "GBP");
+                Session["exRate"] = 1;
+            }
+            ddCurrency.SelectedValue = (string)Session["fareCurr"];
         }
-        Session["fareCurr"] = ddCurrency.SelectedValue.Substring(0, 3);
     }
-    protected void ddCurrency_SelectedIndexChanged(object sender, EventArgs e)
+    protected void ddCurrency_Change(object sender, EventArgs e)
     {
-        //Session["fareCurr"] = ddCurrency.SelectedValue.Substring(0, 3);
+        string key = ddCurrency.SelectedValue;
+        Dictionary<string, double> rates = RestClient.getExRate(key).Rates;
+        Session["fareCurr"] = key;
+        Session["exRate"] = rates.ContainsKey(key) ? rates[key] : 1;
     }
 }

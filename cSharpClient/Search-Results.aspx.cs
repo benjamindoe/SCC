@@ -16,7 +16,13 @@ public partial class Search_Results : System.Web.UI.Page
         string destination = Request.QueryString["dest"] != null ? Request.QueryString["dest"] : "";
         string airline = Request.QueryString["airline"] != null ? Request.QueryString["airline"] : "";
         flightWSclient = new FlightServiceReference.FlightBookingWSClient();
-        FlightServiceReference.Flight[] flights = flightWSclient.searchFlight(origin, destination, airline, (Request.QueryString["Direct"] == "True"));
+        if(String.IsNullOrWhiteSpace(origin) && String.IsNullOrWhiteSpace(destination))
+        {
+
+        }
+        FlightServiceReference.Flight[] flights = String.IsNullOrWhiteSpace(origin) && String.IsNullOrWhiteSpace(destination) ?
+            flightWSclient.getAvailableSeats():
+            flightWSclient.searchFlight(origin, destination, airline, (Request.QueryString["Direct"] == "True"));
         DropDownList mpDd = (DropDownList)Master.FindControl("ddCurrency");
         string fareCurr = String.IsNullOrWhiteSpace(mpDd.SelectedValue) ? "GBP" : mpDd.SelectedValue;
 
@@ -40,7 +46,7 @@ public partial class Search_Results : System.Web.UI.Page
                 spans.Add(spanMaker("flight__date", f.Date.ToLongDateString()));
                 spans.Add(spanMaker("flight__airline", f.Airline));
                 HtmlGenericControl seatSpan = spanMaker("flight__seat-no", "Available Seats: " + f.NoOfSeats);
-                seatSpan.ID = "spnSeat";
+                seatSpan.ID = "spnSeat_"+f.id;
                 spans.Add(seatSpan);
                 string directTxt = f.NoOfConnections > 0 ? f.NoOfConnections + " Connections" : "Direct Flight";
                 spans.Add(spanMaker("flight__direct", directTxt));
@@ -59,9 +65,9 @@ public partial class Search_Results : System.Web.UI.Page
                     hiddenDropdownBtn.Attributes.Add("data-beloworigin", "true");
                     hiddenDropdownBtn.Attributes.Add("data-constrainwidth", "false");
                     hiddenDropdownBtn.Attributes.Add("class", "dropdown-button");
-                    hiddenDropdownBtn.Attributes.Add("data-activates", "MainContent_directionDropdown");
+                    hiddenDropdownBtn.Attributes.Add("data-activates", "MainContent_directionDropdown_"+f.id);
                     HtmlGenericControl hiddenDropdown = new HtmlGenericControl("ul");
-                    hiddenDropdown.ID = "directionDropdown";
+                    hiddenDropdown.ID = "directionDropdown_" + f.id;
                     hiddenDropdown.Attributes.Add("class", "dropdown-content");
                     List<string> directions = RestClient.getDirections(f.OriginCity.Airport, f.DestinationCity.Airport);
                     for (int j = 0; j < directions.Count; ++j)
@@ -73,15 +79,24 @@ public partial class Search_Results : System.Web.UI.Page
                     liFlight.Controls.Add(hiddenDropdownBtn);
                     liFlight.Controls.Add(hiddenDropdown);
                 }
-
-
+                HtmlGenericControl input_field = new HtmlGenericControl("div");
+                input_field.Attributes.Add("class", "noSeats input-field inline");
+                HtmlGenericControl lblSeats = new HtmlGenericControl("label");
+                lblSeats.InnerText = "Number of Seats";
+                lblSeats.Attributes.Add("for", "MainContent_noSeats");
+                TextBox noSeats = new TextBox();
+                noSeats.ID = "noSeats_"+f.id;
+                noSeats.TextMode = TextBoxMode.Number;
                 HtmlButton btn = new HtmlButton();
-                btn.ID = "btnBuyFlight";
+                btn.ID = "btnBuyFlight_"+f.id;
                 btn.Attributes.Add("class", "btn flight__btn waves-effect waves-light light-green");
                 btn.Attributes.Add("data-flightId", f.id.ToString());
                 btn.ServerClick += new System.EventHandler(this.btnBuy_Click);
                 btn.InnerHtml = "Buy <i class=\"material-icons right\">shopping_cart</i>";
                 btn.DataBind();
+                input_field.Controls.Add(noSeats);
+                input_field.Controls.Add(lblSeats);
+                liFlight.Controls.Add(input_field);
                 liFlight.Controls.Add(btn);
                 lstFlights.Controls.Add(liFlight);
             }
@@ -94,10 +109,6 @@ public partial class Search_Results : System.Web.UI.Page
             liFlight.Controls.Add(spanMaker("valign center-align", "No Flights Found."));
             lstFlights.Controls.Add(liFlight);
         }
-    }
-    protected void Page_PreRender(object sender, EventArgs e)
-    {
-
     }
     protected HtmlGenericControl spanMaker(string className, string innerText)
     {
@@ -119,8 +130,10 @@ public partial class Search_Results : System.Web.UI.Page
         int flightId = 0;
         if(Int32.TryParse(btn.Attributes["data-flightId"], out flightId))
         {
-            int seatNo = flightWSclient.bookFlight(flightId);
-            HtmlGenericControl spnSeat = (HtmlGenericControl)btn.Parent.FindControl("spnSeat");
+            TextBox noSeat = (TextBox)btn.Parent.FindControl("noSeats_" + flightId);
+            int noSeats = int.Parse(noSeat.Text);
+            int seatNo = flightWSclient.bookFlight(flightId, noSeats);
+            HtmlGenericControl spnSeat = (HtmlGenericControl)btn.Parent.FindControl("spnSeat_" + flightId);
             spnSeat.InnerText = "Available Seats: " + seatNo;
         }
     }

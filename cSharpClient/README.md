@@ -4,3 +4,4 @@ Materialize CSS based on Google's Material Design Language, MIT Licence http://m
 RESTful JSON Currency Converter API http://fixer.io/
 Clearbit RESTful logo API https://clearbit.com/logo/
 Google Map APIs (Web and HTTP) https://developers.google.com/maps/
+OpenWeatherMap, Inc. http://openweathermap.org

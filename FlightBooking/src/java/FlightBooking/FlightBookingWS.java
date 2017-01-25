@@ -68,7 +68,7 @@ public class FlightBookingWS {
         flightList.add(flight);
 
         flight = new FlightBooking.Flight();
-        flight.setId(2);
+        flight.setId(5);
         flight.setAirline("EasyJet");
         flight.setWebsite("easyjet.com");
         airport = new Address();

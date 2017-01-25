@@ -14,12 +14,6 @@
   <message name="setupResponse">
     <part name="parameters" element="tns:setupResponse" />
   </message>
-  <message name="getAvailableSeats">
-    <part name="parameters" element="tns:getAvailableSeats" />
-  </message>
-  <message name="getAvailableSeatsResponse">
-    <part name="parameters" element="tns:getAvailableSeatsResponse" />
-  </message>
   <message name="searchFlight">
     <part name="parameters" element="tns:searchFlight" />
   </message>
@@ -32,14 +26,16 @@
   <message name="bookFlightResponse">
     <part name="parameters" element="tns:bookFlightResponse" />
   </message>
+  <message name="getAvailableSeats">
+    <part name="parameters" element="tns:getAvailableSeats" />
+  </message>
+  <message name="getAvailableSeatsResponse">
+    <part name="parameters" element="tns:getAvailableSeatsResponse" />
+  </message>
   <portType name="FlightBookingWS">
     <operation name="setup">
       <input wsam:Action="http://FlightBooking/FlightBookingWS/setupRequest" message="tns:setup" />
       <output wsam:Action="http://FlightBooking/FlightBookingWS/setupResponse" message="tns:setupResponse" />
-    </operation>
-    <operation name="getAvailableSeats">
-      <input wsam:Action="http://FlightBooking/FlightBookingWS/getAvailableSeatsRequest" message="tns:getAvailableSeats" />
-      <output wsam:Action="http://FlightBooking/FlightBookingWS/getAvailableSeatsResponse" message="tns:getAvailableSeatsResponse" />
     </operation>
     <operation name="searchFlight">
       <input wsam:Action="http://FlightBooking/FlightBookingWS/searchFlightRequest" message="tns:searchFlight" />
@@ -48,6 +44,10 @@
     <operation name="bookFlight">
       <input wsam:Action="http://FlightBooking/FlightBookingWS/bookFlightRequest" message="tns:bookFlight" />
       <output wsam:Action="http://FlightBooking/FlightBookingWS/bookFlightResponse" message="tns:bookFlightResponse" />
+    </operation>
+    <operation name="getAvailableSeats">
+      <input wsam:Action="http://FlightBooking/FlightBookingWS/getAvailableSeatsRequest" message="tns:getAvailableSeats" />
+      <output wsam:Action="http://FlightBooking/FlightBookingWS/getAvailableSeatsResponse" message="tns:getAvailableSeatsResponse" />
     </operation>
   </portType>
   <binding name="FlightBookingWSPortBinding" type="tns:FlightBookingWS">
@@ -61,15 +61,6 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="getAvailableSeats">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
     <operation name="searchFlight">
       <soap:operation soapAction="" />
       <input>
@@ -80,6 +71,15 @@
       </output>
     </operation>
     <operation name="bookFlight">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getAvailableSeats">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

@@ -15,12 +15,16 @@
             <asp:DropDownList ID="ddFlightsTo" runat="server"></asp:DropDownList>
             <label>To</label>
         </div>
-        <asp:CheckBox ID="chkDirect" runat="server" Text="Direct Flights Only"/>
-        <div class="input-field">
-            <asp:DropDownList ID="ddAirlines" runat="server"></asp:DropDownList>
+        <div class="optional">
+            <asp:CheckBox ID="chkDirect" runat="server" Text="Direct Flights Only"/>
+            <div class="input-field inline">
+                <asp:DropDownList ID="ddAirlines" runat="server"></asp:DropDownList>
+            <label>Airline Preference</label>
+            </div>
         </div>
     
-        <asp:Button ID="btnSearch" runat="server" OnClick="btnSearch_Click" Text="Search" />
+        <asp:Button ID="btnSearch" runat="server" CssClass="btn" OnClick="btnSearch_Click" Text="Search" />
+        <asp:Button ID="btnAllFlights" runat="server" CssClass="btn" OnClick="btnSearch_Click" Text="All Flights" />
     </div>
 
 </asp:Content>

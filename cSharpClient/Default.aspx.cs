@@ -37,7 +37,14 @@ public partial class _Default : System.Web.UI.Page
 
     protected void btnSearch_Click(object sender, EventArgs e)
     {
-        string airline = ddAirlines.SelectedValue != "No Preference" ? ddAirlines.SelectedValue : "";
-        Response.Redirect("~/Search-Results.aspx?origin=" + ddFlightsFrom.SelectedValue + "&dest="+ ddFlightsTo.SelectedValue + "&Airline=" + airline + "&Direct=" + chkDirect.Checked);
+        Button btn = (Button)sender;
+        string queryStr = "";
+        if(btn == btnSearch)
+        {
+            string airline = ddAirlines.SelectedValue != "No Preference" ? ddAirlines.SelectedValue : "";
+            queryStr = "?origin = " + ddFlightsFrom.SelectedValue + " & dest = " + ddFlightsTo.SelectedValue + " & Airline = " + airline + " & Direct = " + chkDirect.Checked;
+
+        }
+        Response.Redirect("~/Search-Results.aspx" + queryStr);
     }
 }
